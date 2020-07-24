@@ -11,9 +11,9 @@ import SwiftUI
 struct CircleImage: View {
     var body: some View {
         Image("turtlerock")
-            .clipShape(Circle())
-            .overlay(Circle().stroke(Color.white, lineWidth: 4))
-            .shadow(radius: 10)
+            .clipShape(Circle()) // 裁剪为某个形状。参数是符合Shape protocol的实例
+            .overlay(Circle().stroke(Color.white, lineWidth: 4)) // overlay 上面覆盖。.stroke：线条。圆形白色描边
+            .shadow(radius: 10) // 阴影
     }
 }
 

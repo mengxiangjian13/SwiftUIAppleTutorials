@@ -12,18 +12,18 @@ struct ContentView: View {
     var body: some View {
         VStack {
             MapView()
-                .edgesIgnoringSafeArea(.top)
-                .frame(height: 300)
+                .edgesIgnoringSafeArea(.top) // 忽略安全区域，直接顶头
+                .frame(height: 300) // 可以规定frame
             CircleImage()
-                .offset(y: -130)
-                .padding(.bottom, -130)
-            VStack(alignment: .leading) {
+                .offset(y: -130) // 偏移量
+                .padding(.bottom, -130) // padding
+            VStack(alignment: .leading) { // 垂直方向 layout
                 Text("Turtle Rock")
                     .font(.title)
-                HStack {
+                HStack { // 水平方向layout
                     Text("Joshua Tree National Park")
                         .font(.subheadline)
-                    Spacer()
+                    Spacer() // 填满空余空间。
                     Text("California")
                         .font(.subheadline)
                 }

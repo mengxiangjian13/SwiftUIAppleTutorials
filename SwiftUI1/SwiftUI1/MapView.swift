@@ -9,6 +9,12 @@
 import SwiftUI
 import MapKit
 
+/**
+ SwiftUI 中可以使用UIKit的某些组件，但UIKit的组件，需要使用SwiftUI的组件来包装。SwiftUI的组件，实现UIViewRepresentable协议中的两个方法就好。
+ 1. makeUIView，用来创建UIKit组件。
+ 2. updateUIView，当UI需要刷新的时候调用。
+ */
+
 struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         MKMapView(frame: .zero)
